@@ -1,9 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Результат</title>
 </head>
 <body>
+       <h1>${sessionScope.result}</h1>
+           <a href="hello">Начать заново</a>
 
+           <hr>
+           <h3>Статистика сессии</h3>
+           <p>ID сессии: ${pageContext.session.id}</p>
+           <p>Время создания: ${pageContext.session.creationTime}</p>
 </body>
 </html>
