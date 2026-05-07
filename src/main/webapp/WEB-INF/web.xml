@@ -6,6 +6,26 @@
          version="3.1">
 
     <!-- Конфигурация приложения -->
-    <display-name>My Servlet Application</display-name>
+    <display-name>My Servlet Application (Space Quest)</display-name>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <coockie-config>
+            <http-only>true</http-only>
+        </coockie-config>
+    </session-config>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error500.jsp</location>
+    </error-page>
 
 </web-app>
