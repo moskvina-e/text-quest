@@ -136,6 +136,6 @@ public class QuestService {
 
     public boolean isFinalStep (String stepId) {
         QuestStep step = steps.get(stepId);
-        return step != null && step.getOption1() != null;
+        return step != null && step.getOption1() == null;
     }
 }

@@ -70,9 +70,11 @@ public class GameServlet extends HttpServlet {
 
         // Обновить статистику
         if (questService.isFinalStep(nextStepID)) {
-            Integer gamePlayed = (Integer) session.getAttribute("gamesPlayed"); //todo  не нужно ли прибавить 1?
-            if (gamePlayed == null)
-                gamePlayed = 0;
+            Integer gamesPlayed = (Integer) session.getAttribute("gamesPlayed"); //todo  не нужно ли прибавить 1?
+            if (gamesPlayed == null)
+                gamesPlayed = 0;
+            gamesPlayed++;
+            session.setAttribute("gamesPlayed", gamesPlayed);
 
         }
 
