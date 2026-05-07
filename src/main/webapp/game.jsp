@@ -18,7 +18,35 @@
  <h2>${step.text}</h2>
   <c:choose>
     <c:when test="${not empty step.option1}">
-
+      <form action="game" method="post">
+        <input type="hidden" name="currentStep" value="${step.id}">
+        <p>
+          <input type="radio" name="answer" value="1" required>
+          ${step.option1}
+        </p>
+        <p>
+          <input type="radio" name="answer" value="2" required>
+          ${step.option2}
+        </p>
+        <button type="submit">Ответить</button>
+      </form>
     </c:when>
+
+    <c:otherwise>
+      <h3>${step.text}</h3>
+      <p>
+        <a href="game?step=start">Играть снова</a>
+        <a href="start">Начать сначала</a>
+      </p>
+      </c:otherwise>
+     </c:choose>
+
+  <hr>
+
+  <div>
+    <p>ID сесссии: ${pageContext.session.id}</p>
+    <p>Текущий шаг: ${step.id}</p>
+  </div>
+
 </body>
 </html>
