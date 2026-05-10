@@ -101,7 +101,7 @@ public class QuestService {
         steps.put(
                 "lose2", new QuestStep(
                         // id
-                        "lose1",
+                        "lose2",
                         // text
                         "Ты не пошел на переговоры. Поражение.",
                         // option1
@@ -116,7 +116,7 @@ public class QuestService {
         steps.put(
                 "lose3", new QuestStep(
                         // id
-                        "lose1",
+                        "lose3",
                         // text
                         "Твою ложь разоблачили. Поражение.",
                         // option1
