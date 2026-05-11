@@ -35,8 +35,8 @@ class HelloServletTest {
     }
 
     @Test
-    @DisplayName("Test Hello servlet")
-    void testHelloServlet() throws ServletException, IOException {
+    @DisplayName("Test doGet from HelloServlet")
+    void testDoGetFromHelloServlet() throws ServletException, IOException {
         when(req.getRequestDispatcher("/index.jsp")).thenReturn(dispatcher);
         servlet.doGet(req, resp);
         verify(req, times(1)).getRequestDispatcher("/index.jsp");
